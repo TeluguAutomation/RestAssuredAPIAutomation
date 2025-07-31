@@ -13,7 +13,11 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  schedule:
+    - cron: '00 18 * * *'  # Runs every day at 18:00 UTC → 11:30 PM IST
+    - cron: '00 3 * * *'   # Runs every day at 03:00 UTC → 08:30 AM IST
 
+#  workflow_dispatch:  # Allows manual trigger
 jobs:
   build:
 
